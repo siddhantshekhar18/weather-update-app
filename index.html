@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Update Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Title and Date/Time -->
+    <div class="header">
+      <h1 class="app-title">Weather Forecast</h1>
+      <div class="current-date">
+        <span id="date-day"></span>
+      </div>
+    </div>
+
+    <!-- Search Box -->
+    <div class="search-box">
+      <input type="text" id="city-input" placeholder="Enter city name...">
+      <button id="search-btn">Search</button>
+      <button id="geo-btn">Use My Location</button>
+    </div>
+
+    <!-- Unit Switch -->
+    <div class="unit-toggle">
+      <span id="celsius" class="active">°C</span> | <span id="fahrenheit">°F</span>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading-spinner" style="display: none;">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Weather Information -->
+    <div id="weather-info" class="weather-info">
+      <div class="current-weather">
+        <h2 id="city-name" class="city-name"></h2>
+        <div class="temp-description">
+          <div id="temp" class="temperature"></div>
+          <div id="description" class="description"></div>
+        </div>
+        <img id="weather-icon" class="weather-icon" alt="Weather Icon">
+        <div class="other-info">
+          <div id="wind" class="wind"></div>
+          <div id="humidity" class="humidity"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5-Day Forecast -->
+    <div id="forecast-info" class="forecast-info">
+      <h3>5-Day Forecast</h3>
+      <div class="forecast-cards" id="forecast-cards"></div>
+    </div>
+
+    <!-- Error Message -->
+    <div id="error-message" class="error-message"></div>
+  </div>
+</body>
+</html>
